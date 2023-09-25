@@ -155,7 +155,7 @@ shorten (n :/: d) = (n `div` f) :/: (d `div` f)
 -- Hint: DIV can easy be implemented by MUL with the reciprocal
 evalOp :: Op -> Rat -> Rat -> Rat  
 evalOp ADD (ln :/: ld) (rn :/: rd) = shorten (((ln * rd) + (rn * ld)) :/: (ld * rd))
-evalOp = todo
+evalOp _ _ _ = todo
 
 evalOpSpec :: Spec
 evalOpSpec = 
